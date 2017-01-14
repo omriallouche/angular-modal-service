@@ -1,82 +1,78 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="modalApp">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>otModalService</title>
+---
+layout: default
+title: Angular Zendesk Submit Ticket
+---
 
-        <!--<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<!--<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
-        <!--<script src="node_modules/angular/angular.min.js"></script>-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+<!--<script src="node_modules/angular/angular.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
 
-        <!--<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.4.0/ui-bootstrap-tpls.min.js"></script>
+<!--<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.4.0/ui-bootstrap-tpls.min.js"></script>
 
-        <script src="src/otModalService.js"></script>
-        <script src="testApp.js"></script>
+<script src="src/otModalService.js"></script>
+<script src="testApp.js"></script>
 
-    </head>
-    <body ng-controller="ModalController">
-        <div class="container">
-            <h1>otModalService</h1>
-            <br>
-            <div class="row">
-                <button class="btn btn-default" ng-click="openBasic()">open basic modal</button>
-                <button class="btn btn-default" ng-click="openResolve()">open modal with resolve</button>
-                <a class="btn btn-default" href="?modal=basic">open by link</a>
-            </div>
-            <hr>
-            <div class="row">
-
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" ng-model="params.canClose"> Can close?
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" ng-model="params.backdrop"> Backdrop?
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" ng-model="params.animation"> Animation?
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="selectSize" class="col-sm-2 control-label">Size</label>
-                        <div class="col-sm-10">
-                            <select id="selectSize" ng-model="params.size" class="form-control">
-                                <option value="sm">Small</option>
-                                <option value="md">Medium</option>
-                                <option value="lg">Large</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default" ng-click="openWithParams()">Open modal with params</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
+<div ng-app="modalApp" ng-controller="ModalController">
+    <div class="container">
+        <h1>otModalService</h1>
+        <br>
+        <div class="row">
+            <button class="btn btn-default" ng-click="openBasic()">open basic modal</button>
+            <button class="btn btn-default" ng-click="openResolve()">open modal with resolve</button>
+            <a class="btn btn-default" href="?modal=basic">open by link</a>
         </div>
-    </body>
-</html>
+        <hr>
+        <div class="row">
+
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="params.canClose"> Can close?
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="params.backdrop"> Backdrop?
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="params.animation"> Animation?
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="selectSize" class="col-sm-2 control-label">Size</label>
+                    <div class="col-sm-10">
+                        <select id="selectSize" ng-model="params.size" class="form-control">
+                            <option value="sm">Small</option>
+                            <option value="md">Medium</option>
+                            <option value="lg">Large</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default" ng-click="openWithParams()">Open modal with
+                            params
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
