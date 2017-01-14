@@ -1,11 +1,13 @@
 # Angular Modal Service
 An AngularJS helper service for simple ui-bootstrap modals.
 The service allows you to:
-- open a modal using a JS function, and pass parameters to the modal
+ - open a modal using a JS function (e.g. otModalService.showModal("basic")
+ - open a modal using URL params (e.g. ?modal=welcome)
  - pass parameters to the modal
  - get data back from the modal
+ - run code when the modal is closed
 
-[Demo](omriallouche.github.io/angular-modal-service/)
+[Demo](http://omriallouche.github.io/angular-modal-service/)
 
 ## Getting started:
   - Include [Angular-UI Bootstrap](https://angular-ui.github.io/bootstrap/#/getting_started)
