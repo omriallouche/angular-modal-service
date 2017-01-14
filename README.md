@@ -83,4 +83,5 @@ function (dismiss) {
 });
 ```
 
-
+## Contributing
+Pull requests are welcome!
